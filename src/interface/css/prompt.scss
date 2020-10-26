@@ -1,0 +1,138 @@
+#prompt {
+   background: rgba(0, 0, 0, 0.219);
+   position: absolute;
+   left: 0px;
+   top: 0px;
+   height: 100%;
+   width: 100%;
+   z-index: 99;
+   transition: opacity 0.1s;
+   opacity: 1;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   #inner {
+      width: 80vw;
+
+      #viewer {
+         background: rgba(0, 0, 0, 0.548);
+         border: 1px dashed rgba(255, 255, 255, 0.301);
+         height: 70vh;
+         position: relative;
+         overflow: auto;
+         color: white;
+
+         pre {
+            position: absolute;
+            display: inline-block;
+            width: 100%;
+            font-size: 15px;
+            padding: 10px 14px;
+            padding-bottom: 14px;
+            line-height: 20px;
+         }
+      }
+
+      #viewer::-webkit-scrollbar {
+         width: 15px;
+      }
+      
+      #viewer::-webkit-scrollbar-track {
+         background: #00000071;
+      }
+      
+      #viewer::-webkit-scrollbar-thumb {
+         background: rgba(87, 160, 255, 0.514);
+      }
+
+      #container {
+         background: rgba(0, 0, 0, 0.548);
+         border: 1px dashed rgba(255, 255, 255, 0.301);
+         margin-top: 2px;
+         height: 80px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         color: #CECECE;
+         width: 400px;
+         margin: auto;
+         transition: 0.2s;
+
+         #route {
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            z-index: 2;
+            cursor: pointer;
+         }
+
+         #label {
+            position: absolute;
+            z-index: 1;
+            font-size: 16px;
+            text-transform: uppercase;
+         }
+      }
+
+      #container:hover {
+         background: rgba(0, 0, 0, 0.699);  
+         color: white;
+      }
+
+      #header {
+         text-align: center;
+         color: white;
+         font-size: 18px;
+         text-transform: uppercase;
+         padding: 5px;
+         padding-bottom: 10px;
+      }
+   
+      #content {
+         background: rgba(0, 0, 0, 0.295);
+         min-height: 350px;
+      }
+
+      // LOADING SCREEN -- https://loading.io/css/
+      .lds-dual-ring {
+         display: block;
+         width: 80px;
+         height: 80px;
+         margin: auto;
+      }
+
+      .lds-dual-ring:after {
+         content: " ";
+         display: block;
+         width: 80px;
+         height: 80px;
+         margin: 1px;
+         border-radius: 50%;
+         border: 6px solid #fff;
+         border-color: #fff transparent #fff transparent;
+         animation: lds-dual-ring 1.2s linear infinite;
+      }
+
+      @keyframes lds-dual-ring {
+         0% { transform: rotate(0deg); }
+         100% { transform: rotate(360deg); }
+      }
+   }
+
+   #close {
+      background: url('../images/close.png') center center no-repeat;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      height: 80px;
+      width: 80px;
+      opacity: 0.6;
+      transition: 0.3s;
+   }
+
+   #close:hover {
+      cursor: pointer;
+      opacity: 1;
+   }
+ }

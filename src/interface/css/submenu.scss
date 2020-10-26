@@ -1,0 +1,26 @@
+#submenu {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    padding: 20px;
+    display: flex;
+
+    li {
+        background-color: rgba(59, 177, 59, 0.411);
+        border: 1px solid rgba(59, 177, 59, 0.425);
+        display: inline-block;
+        padding: 8px 12px;
+        color: #CECECE;
+        cursor: pointer;
+        text-shadow: 1px 1px #242424;
+        transition-property: background-color, color;
+        transition-duration: 0.2s, 0.2s;
+        margin-left: 10px;
+        border-radius: 5px;
+    }
+
+    li:hover {
+        background-color:rgba(59, 177, 59, 0.521);
+        color: white;
+    }
+}
